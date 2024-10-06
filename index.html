@@ -27,6 +27,7 @@
   <div class="centered">
     <p>Raphael De Los Reyes &#x2022; Zaid Soomro &#x2022; Eric Creasy &#x2022; David Kuang</p>
   </div>
+  <div><img src="demo.png" alt="demo screenshot" width="100%"></div>
   <div>
     <h1>Tech Write Up</h1>
     <div class="centered">
@@ -41,21 +42,15 @@
       often progress slowly, limiting the amount of terrain they can explore.</p>
     <p>The distance between Earth and Mars results in significant communication delays, ranging from 4 to 24 minutes
       one-way. This delay makes real-time control impossible and complicates problem-solving during critical mission
-      phases.
-    </p>
-    <p>Lack of redundancy: If a single rover fails or gets stuck, the entire mission is jeopardized</p>
-    <p>Slow progress:Proposed Solution</p>
+      phases. Another issue is a lack of redundancy: if a single rover fails or gets stuck, the entire mission is jeopardized.
+      </p>
     <p>To address these limitations and accelerate Martian exploration, we propose the development of a simulation
-      system
-      for a flying robot swarm designed to explore and map the Martian surface. Building upon NASA's innovative
-      Marsbee
-      concept, our simulation project aims to extend and refine the swarm exploration approach for Mars. From the
-      Marsbee
-      concept, the algorithm will implement resilient system design, emphasizing the robustness of the swarm to
-      individual
-      unit failures, and collaborative data collection, implementing algorithms for single and collaborative sample or
-      data
-      collection missions among swarm members.</p>
+      system for a flying robot swarm designed to explore and map the Martian surface. Building upon NASA's innovative
+      Marsbee concept, our simulation project aims to extend and refine the swarm exploration approach for Mars. From the
+      Marsbee concept, the algorithm will implement resilient system design, emphasizing the robustness of the swarm to
+      individual unit failures, and collaborative data collection, implementing algorithms for single and collaborative sample
+      or
+      data collection missions among swarm members.</p>
     <h2>Scope</h2>
     <h3>Martian Environment Simulation</h2>
       <ul>
@@ -132,6 +127,7 @@
          psuedo code can be found on the github repo https://github.com/RD2P/Simulated-Martian-Swarm-Exploration-and-Mapping
         </li>
       </ul>
+
       <h2>Communication</h2>
       <h3>1. Introduction</h3>
       <p>The following outlines the design and requirements for a communication system utilizing Flying Ad-Hoc Networks
@@ -198,7 +194,7 @@
       <p>Each member of the swarm will be represented as a node in a graph, with <em>k</em> specialized members carrying
         radio equipment for communication with the rover (where <em>k</em> ≤ <em>n</em>). The swarm will utilize FANET
         to achieve intercommunication.</p>
-      <img src="FANET_nodegraph.png" , alt="node graph showing different ways the FANET can work">
+      <img src="FANET_nodegraph.png" width="100%" alt="node graph showing different ways the FANET can work">
 
       <h4>6.1 Communication Requirements</h4>
       <ul>

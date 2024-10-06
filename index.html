@@ -5,13 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .tech-write-up {
-      width: 50%;
-      margin: 0 auto;
-    }
-
     .centered {
       text-align: center;
+    }
+
+    body {
+      font-family: Open Sans, Arial;
+      margin: 40px auto;
+      max-width: 700px;
+      font-size: 18px;
+      color: #444;
+      padding: 0 10px;
     }
   </style>
   <title>Mars Swarm Project</title>
@@ -19,16 +23,15 @@
 
 <body>
   <h1 class="centered">Simulated Martian Swarm Exploration and Mapping</h1>
-  <div style="text-align:center;">
-    Godot demo embedding here
+  <div class="centered">
+    <p>Raphael De Los Reyes &#x2022; Zaid Soomro &#x2022; Eric Creasy &#x2022; David Kuang</p>
   </div>
-  <div class="tech-write-up">
+  <div style="text-align:center; color: orange">
+    << Godot demo embedding here >>
+  </div>
+  <div>
     <h1>Tech Write Up</h1>
     <div class="centered">
-      <p>Raphael De Los Reyes</p>
-      <p>Zaid Soomro</p>
-      <p>Eric Creasy</p>
-      <p>David Kuang</p>
     </div>
     <h3>Objective: Develop a simulation of a robot swarm exploring and mapping the Martian surface.</h3>
     <h2>Problem Statement</h2>
@@ -57,91 +60,91 @@
       collection missions among swarm members.</p>
     <h2>Scope</h2>
     <h3>Martian Environment Simulation</h2>
-    <ul>
-      <li>
-        <p>Create a 3D environment representing a section of the Martian surface.</p>
-      </li>
-      <li>
-        <p>Include terrain features like craters, rocks, and potential cave entrances.</p>
-      </li>
-    </ul>
-    <h3>Robot Swarm</h3>
-    <ul>
-      <li>
-        <p>Implement a swarm of 5-10 simple virtual robots representing micro-rovers.</p>
-      </li>
-      <li>
-        <p>Each robot should have basic sensing capabilities (e.g., detecting nearby objects, terrain features, and
-          other
-          robots).</p>
-      </li>
-      <li>
-        <p>Robot based off the Marsbee concept:</p>
-      </li>
-    </ul>
-    <p><a target="_blank" rel="noopener noreferrer nofollow"
-        href="https://www.nasa.gov/general/marsbee-swarm-of-flapping-wing-flyers-for-enhanced-mars-exploration/"><span
-          style="color: rgb(17, 85, 204)">https://www.nasa.gov/general/marsbee-swarm-of-flapping-wing-flyers-for-enhanced-mars-exploration/</span></a>
-    </p>
-    <h3>Swarm Behavior</h3>
-    <p>Implement basic swarm intelligence algorithms:</p>
-    <ul>
-      <li>
-        <p>Collision avoidance with terrain features and other robots</p>
-      </li>
-      <li>
-        <p>Dispersion to efficiently cover the Martian terrain</p>
-      </li>
-      <li>
-        <p>Simple communication between nearby robots</p>
-      </li>
-    </ul>
-    <h3>Exploration and Mapping Algorithm</h3>
-    <ul>
-      <li>
-        <p>Develop a decentralized algorithm for the swarm to explore and map the Martian surface.</p>
-      </li>
-      <li>
-        <p>Implement a method for robots to mark and share information about discovered features.</p>
-      </li>
-    </ul>
-    <h3>Visualization</h3>
-    <p>Create a basic graphical interface to visualize the swarm's movement and mapping progress on the Martian
-      terrain.
-    </p>
-    <h3>Performance Metrics</h3>
-    <p>Implement metrics to measure the swarm's effectiveness:</p>
-    <ul>
-      <li>
-        <p>Percentage of area mapped</p>
-      </li>
-      <li>
-        <p>Time to explore key features (e.g., cave entrances)</p>
-      </li>
-      <li>
-        <p>Efficiency of coverage (avoiding redundant exploration)</p>
-      </li>
-    </ul>
+      <ul>
+        <li>
+          <p>Create a 3D environment representing a section of the Martian surface.</p>
+        </li>
+        <li>
+          <p>Include terrain features like craters, rocks, and potential cave entrances.</p>
+        </li>
+      </ul>
+      <h3>Robot Swarm</h3>
+      <ul>
+        <li>
+          <p>Implement a swarm of 5-10 simple virtual robots representing micro-rovers.</p>
+        </li>
+        <li>
+          <p>Each robot should have basic sensing capabilities (e.g., detecting nearby objects, terrain features, and
+            other
+            robots).</p>
+        </li>
+        <li>
+          <p>Robot based off the Marsbee concept:</p>
+        </li>
+      </ul>
+      <p><a target="_blank" rel="noopener noreferrer nofollow"
+          href="https://www.nasa.gov/general/marsbee-swarm-of-flapping-wing-flyers-for-enhanced-mars-exploration/"><span
+            style="color: rgb(17, 85, 204)">https://www.nasa.gov/general/marsbee-swarm-of-flapping-wing-flyers-for-enhanced-mars-exploration/</span></a>
+      </p>
+      <h3>Swarm Behavior</h3>
+      <p>Implement basic swarm intelligence algorithms:</p>
+      <ul>
+        <li>
+          <p>Collision avoidance with terrain features and other robots</p>
+        </li>
+        <li>
+          <p>Dispersion to efficiently cover the Martian terrain</p>
+        </li>
+        <li>
+          <p>Simple communication between nearby robots</p>
+        </li>
+      </ul>
+      <h3>Exploration and Mapping Algorithm</h3>
+      <ul>
+        <li>
+          <p>Develop a decentralized algorithm for the swarm to explore and map the Martian surface.</p>
+        </li>
+        <li>
+          <p>Implement a method for robots to mark and share information about discovered features.</p>
+        </li>
+      </ul>
+      <h3>Visualization</h3>
+      <p>Create a basic graphical interface to visualize the swarm's movement and mapping progress on the Martian
+        terrain.
+      </p>
+      <h3>Performance Metrics</h3>
+      <p>Implement metrics to measure the swarm's effectiveness:</p>
+      <ul>
+        <li>
+          <p>Percentage of area mapped</p>
+        </li>
+        <li>
+          <p>Time to explore key features (e.g., cave entrances)</p>
+        </li>
+        <li>
+          <p>Efficiency of coverage (avoiding redundant exploration)</p>
+        </li>
+      </ul>
 
-    <h2>Implementation</h2>
-    <ul>
-      <li>
-        <p>Use Python with libraries like Pygame for visualization.</p>
-      </li>
-      <li>
-        <p>Simulate Martian gravity and terrain conditions to affect robot movement.</p>
-      </li>
-      <li>
-        <p>Implement simple obstacle avoidance for rocky terrain.</p>
-      </li>
-      <li>
-        <p>Add a feature for robots to detect and mark potential sites of scientific interest.</p>
-      </li>
-      <li>
-        <p>Include a basic communication model to simulate data sharing between robots.</p>
-      </li>
-    </ul>
-<h2>Communication</h2>
+      <h2>Implementation</h2>
+      <ul>
+        <li>
+          <p>Use Python with libraries like Pygame for visualization.</p>
+        </li>
+        <li>
+          <p>Simulate Martian gravity and terrain conditions to affect robot movement.</p>
+        </li>
+        <li>
+          <p>Implement simple obstacle avoidance for rocky terrain.</p>
+        </li>
+        <li>
+          <p>Add a feature for robots to detect and mark potential sites of scientific interest.</p>
+        </li>
+        <li>
+          <p>Include a basic communication model to simulate data sharing between robots.</p>
+        </li>
+      </ul>
+      <h2>Communication</h2>
   </div>
 </body>
 

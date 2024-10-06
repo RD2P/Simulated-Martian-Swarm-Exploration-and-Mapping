@@ -42,13 +42,16 @@
       often progress slowly, limiting the amount of terrain they can explore.</p>
     <p>The distance between Earth and Mars results in significant communication delays, ranging from 4 to 24 minutes
       one-way. This delay makes real-time control impossible and complicates problem-solving during critical mission
-      phases. Another issue is a lack of redundancy: if a single rover fails or gets stuck, the entire mission is jeopardized.
+      phases. Another issue is a lack of redundancy: if a single rover fails or gets stuck, the entire mission is
+      jeopardized.
       </p>
     <p>To address these limitations and accelerate Martian exploration, we propose the development of a simulation
       system for a flying robot swarm designed to explore and map the Martian surface. Building upon NASA's innovative
-      Marsbee concept, our simulation project aims to extend and refine the swarm exploration approach for Mars. From the
+      Marsbee concept, our simulation project aims to extend and refine the swarm exploration approach for Mars. From
+      the
       Marsbee concept, the algorithm will implement resilient system design, emphasizing the robustness of the swarm to
-      individual unit failures, and collaborative data collection, implementing algorithms for single and collaborative sample
+      individual unit failures, and collaborative data collection, implementing algorithms for single and collaborative
+      sample
       or
       data collection missions among swarm members.</p>
     <h2>Scope</h2>
@@ -79,11 +82,13 @@
           href="https://www.nasa.gov/general/marsbee-swarm-of-flapping-wing-flyers-for-enhanced-mars-exploration/"><span
             style="color: rgb(17, 85, 204)">https://www.nasa.gov/general/marsbee-swarm-of-flapping-wing-flyers-for-enhanced-mars-exploration/</span></a>
       </p>
+      <img src="marsbee.png" width="100%" alt="">
       <h3>Swarm Behavior</h3>
       <p>Implement basic swarm intelligence algorithms:</p>
       <ul>
         <li>
-          <p>Collision avoidance with terrain features and other robots: The swarm will have inter-communication methods that broadcasts each of their positions relative to the rover</p>
+          <p>Collision avoidance with terrain features and other robots: The swarm will have inter-communication methods
+            that broadcasts each of their positions relative to the rover</p>
         </li>
         <li>
           <p>Dispersion to efficiently cover the Martian terrain</p>
@@ -208,7 +213,8 @@
 
       <h3>7. Data Transmission Protocols</h3>
       <p>Drones will send data to the nearest neighbor acting as a transmission point, using a handshake method to
-        confirm the receipt of data packets. If a drone loses connection or has a poor data link, the swarm will adapt. To avoid collisions from unreachable drones, they will mitigate the issue
+        confirm the receipt of data packets. If a drone loses connection or has a poor data link, the swarm will adapt.
+        To avoid collisions from unreachable drones, they will mitigate the issue
         by either moving on or measuring from a different spot.</p>
 
       <h4>7.1 Neighbor Identification</h4>

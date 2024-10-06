@@ -145,6 +145,104 @@
         </li>
       </ul>
       <h2>Communication</h2>
+    <h3>1. Introduction</h3>
+<p>This document outlines the design and requirements for a communication system utilizing Flying Ad-Hoc Networks (FANET) to facilitate effective data gathering and transmission back to a rover in a swarm robotics context.</p>
+
+<h3>2. Project Objectives</h3>
+<ul>
+    <li>Enable inter-swarm communication.</li>
+    <li>Facilitate data gathering and transmission back to the rover.</li>
+    <li>Optimize resource usage while ensuring reliable communication.</li>
+</ul>
+
+<h3>3. Requirements</h3>
+<ul>
+    <li>Each member of the swarm must be capable of communication with the rover.</li>
+    <li>The system should allow for real-time data transmission and coordination among drones.</li>
+    <li>Minimize energy consumption and computational load on each drone.</li>
+</ul>
+
+<h3>4. Motivation</h3>
+<p>Synchronization within the swarm is essential for successful operation. Two primary methods for achieving synchronization are:</p>
+<ul>
+    <li><strong>Sensory Detection:</strong> Each drone detects nearby obstacles, including other swarm members, and actively avoids them. However, this approach is resource-intensive, requiring significant CPU power and energy for computer vision algorithms.</li>
+    <li><strong>Telecommunication Networks:</strong> Drones can coordinate by calculating their positions relative to each other, allowing them to avoid collisions through computational means. While computer vision is still necessary for tasks like wall detection, it is less critical for detecting other drones.</li>
+</ul>
+<p>On Mars, communication options are limited to UAV direct communication and UAV communication via ad hoc networks.</p>
+
+<h3>5. Communication Methods</h3>
+
+<h4>5.1 UAV Direct Communication</h4>
+<p><strong>Advantages:</strong></p>
+<ul>
+    <li>Fault tolerance in data transmission.</li>
+    <li>Ability to coordinate and distribute tasks in case of member failures.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+    <li>Bandwidth usage increases linearly with swarm size.</li>
+    <li>Each member must maintain long-range communication with the rover, leading to higher costs and larger battery usage.</li>
+    <li>The rover must handle multiple frequencies simultaneously, risking traffic bottlenecks.</li>
+</ul>
+
+<h4>5.2 Ad Hoc Networks</h4>
+<ul>
+    <li>Only specialized members need to communicate with the rover, reducing bandwidth requirements and costs.</li>
+    <li>Bandwidth between the rover and swarm remains constant regardless of swarm size.</li>
+    <li>Task distribution can be decided within the swarm, reducing the synchronization load on the rover and saving developer resources.</li>
+</ul>
+
+<h4>5.3 Challenges</h4>
+<p>A potential challenge is network partitioning if ground control fails; however, this is a non-issue, as the mission would be compromised without ground control. Strategies will be discussed for scenarios where only certain frequencies fail.</p>
+
+<h3>6. Communication Architecture</h3>
+<p>Each member of the swarm will be represented as a node in a graph, with <em>k</em> specialized members carrying radio equipment for communication with the rover (where <em>k</em> ≤ <em>n</em>). The swarm will utilize FANET to achieve intercommunication.</p>
+
+<h4>6.1 Communication Requirements</h4>
+<ul>
+    <li>Define a transmission point: a drone with direct communication to the rover.</li>
+    <li>Each drone must map its assigned area to help the rover decide optimal paths, necessitating:
+        <ul>
+            <li>LIDAR sensors for terrain mapping.</li>
+            <li>Cameras for image capture.</li>
+        </ul>
+    </li>
+</ul>
+<p>Considering the potential size of LIDAR data, the swarm must relay this information back to the rover in a timely manner. Recommended communication includes short-range, high-transmission-rate options such as 4G/5G.</p>
+
+<h4>6.2 Data Handling Solutions</h4>
+<ul>
+    <li>Employ file compression and machine learning techniques for large files.</li>
+    <li>Utilize deep learning for data reconstruction and interpolation.</li>
+    <li>Process data onboard the drones to reduce the transmission load.</li>
+</ul>
+
+<h3>7. Data Transmission Protocols</h3>
+<p>Drones will send data to the nearest neighbor acting as a transmission point, using a handshake method to confirm the receipt of data packets. If a drone loses connection or has a poor data link, the swarm will adapt by either moving on or measuring from a different spot.</p>
+
+<h4>7.1 Neighbor Identification</h4>
+<p>Each drone will know its coordinates relative to the target point sent by the rover. Upon reaching the target, the transmission point will broadcast to its neighbors. Each neighbor will save the drone identifier and distance to it, propagating the signal while adding to the distance. This ensures that all members know where to send their data, as they will remain relatively stationary until receiving new commands from the rover.</p>
+
+<h4>7.2 Data Interference Management</h4>
+<p>Data interference will be handled using established algorithms such as CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance). The transmission delay is manageable since the transmission point requires time to send all data back to the rover.</p>
+
+<h4>7.3 Routing Protocols</h4>
+<p>The selection of routing protocols within the swarm is an actively researched area. For the purposes of this task:</p>
+<ul>
+    <li>Speed is not a primary concern.</li>
+    <li>Security is not a primary concern.</li>
+    <li>Reliability is essential, so any reliable routing protocol will be adequate.</li>
+</ul>
+
+<h3>8. Conclusion</h3>
+<p>This document presents a comprehensive plan for implementing a communication system for a swarm of drones utilizing FANET. By leveraging ad hoc networking and effective data handling strategies, we aim to optimize communication, reduce resource consumption, and ensure reliable operations.</p>
+
+<h3>9. References</h3>
+<ol>
+    <li>Chriki, A., Touati, H., Snoussi, H., & Kamoun, F. (2019). FANET: Communication, mobility models, and security issues. <em>Computer Networks</em>, 163, 106877. <a href="https://doi.org/10.1016/j.comnet.2019.106877">https://doi.org/10.1016/j.comnet.2019.106877</a></li>
+    <li>Almansor, M. J., Md Din, N., Baharuddin, M. Z., Ma, M., Alsayednoor, H. M., Al-Shareeda, M. A., & Al-asadi, A. J. (2024). Routing protocols strategies for flying Ad-Hoc networks (FANET): Review, taxonomy, and open research issues. <em>Alexandria Engineering Journal</em>, 109, 553-577. <a href="https://doi.org/10.1016/j.aej.2024.09.032">https://doi.org/10.1016/j.aej.2024.09.032</a></li>
+    <li>Campion, M., Ranganathan, P., & Faruque, S. (2019). UAV swarm communication and control architectures: A review. <em>Journal of Unmanned Vehicle Systems</em>, 7(2), 93-106. <a href="https://doi.org/10.1139/juvs-2018-0009">https://doi.org/10.1139/juvs-2018-0009</a></li>
+</ol>
   </div>
 </body>
 

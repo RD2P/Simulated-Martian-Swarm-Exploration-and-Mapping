@@ -18,6 +18,15 @@
       padding: 0 10px;
     }
   </style>
+  <script src="Space4/Space4/NASASPACEAPP.js"></script>
+  <script>
+    const engine = new Engine({
+      canvas: document.getElementById('godot-game'),
+      executable: 'Space4/Space4/NASASPACEAPP.wasm',
+      mainPack: 'Space4/Space4/NASASPACEAPP.pck'
+    });
+    engine.startGame();
+  </script>
   <title>Mars Swarm Project</title>
 </head>
 
@@ -29,6 +38,7 @@
   <div style="text-align:center; color: orange">
     << Godot demo embedding here >>
   </div>
+  <canvas id="godot-game" width="800" height="600"></canvas>
   <div>
     <h1>Tech Write Up</h1>
     <div class="centered">

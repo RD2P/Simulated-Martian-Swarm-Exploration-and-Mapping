@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .tech-write-up {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .centered {
+      text-align: center;
+    }
+  </style>
+  <title>Mars Swarm Project</title>
+</head>
+
+<body>
+  <div class="tech-write-up">
+    <h1>Simulated Martian Swarm Exploration and Mapping</h1>
+    <div class="centered">
+      <p>Raphael De Los Reyes</p>
+      <p>Zaid Soomro</p>
+      <p>Eric Creasy</p>
+      <p>David Kuang</p>
+    </div>
+    <h3>Objective: Develop a simulation of a robot swarm exploring and mapping the Martian surface.</h3>
+    <h2>Problem Statement</h2>
+    <p>The exploration and mapping of Mars present significant challenges due to the planet's vast, rugged terrain and
+      harsh
+      environmental conditions. Traditional single-rover missions, while valuable, are limited in their scope and
+      efficiency. The first being slow progress: careful navigation and the need to avoid hazards mean that single
+      rovers
+      often progress slowly, limiting the amount of terrain they can explore.</p>
+    <p>The distance between Earth and Mars results in significant communication delays, ranging from 4 to 24 minutes
+      one-way. This delay makes real-time control impossible and complicates problem-solving during critical mission
+      phases.
+    </p>
+    <p>Lack of redundancy: If a single rover fails or gets stuck, the entire mission is jeopardized</p>
+    <p>Slow progress:Proposed Solution</p>
+    <p>To address these limitations and accelerate Martian exploration, we propose the development of a simulation
+      system
+      for a flying robot swarm designed to explore and map the Martian surface. Building upon NASA's innovative
+      Marsbee
+      concept, our simulation project aims to extend and refine the swarm exploration approach for Mars. From the
+      Marsbee
+      concept, the algorithm will implement resilient system design, emphasizing the robustness of the swarm to
+      individual
+      unit failures, and collaborative data collection, implementing algorithms for single and collaborative sample or
+      data
+      collection missions among swarm members.</p>
+    <h2>Scope</h2>
+    <h2>Martian Environment Simulation</h2>
+    <ul>
+      <li>
+        <p>Create a 3D environment representing a section of the Martian surface.</p>
+      </li>
+      <li>
+        <p>Include terrain features like craters, rocks, and potential cave entrances.</p>
+      </li>
+    </ul>
+    <h2>Robot Swarm</h2>
+    <ul>
+      <li>
+        <p>Implement a swarm of 5-10 simple virtual robots representing micro-rovers.</p>
+      </li>
+      <li>
+        <p>Each robot should have basic sensing capabilities (e.g., detecting nearby objects, terrain features, and
+          other
+          robots).</p>
+      </li>
+      <li>
+        <p>Robot based off the Marsbee concept:</p>
+      </li>
+    </ul>
+    <p><a target="_blank" rel="noopener noreferrer nofollow"
+        href="https://www.nasa.gov/general/marsbee-swarm-of-flapping-wing-flyers-for-enhanced-mars-exploration/"><span
+          style="color: rgb(17, 85, 204)">https://www.nasa.gov/general/marsbee-swarm-of-flapping-wing-flyers-for-enhanced-mars-exploration/</span></a>
+    </p>
+    <h3>Swarm Behavior</h3>
+    <p>Implement basic swarm intelligence algorithms:</p>
+    <ul>
+      <li>
+        <p>Collision avoidance with terrain features and other robots</p>
+      </li>
+      <li>
+        <p>Dispersion to efficiently cover the Martian terrain</p>
+      </li>
+      <li>
+        <p>Simple communication between nearby robots</p>
+      </li>
+    </ul>
+    <h3>Exploration and Mapping Algorithm</h3>
+    <ul>
+      <li>
+        <p>Develop a decentralized algorithm for the swarm to explore and map the Martian surface.</p>
+      </li>
+      <li>
+        <p>Implement a method for robots to mark and share information about discovered features.</p>
+      </li>
+    </ul>
+    <h3>Visualization</h3>
+    <p>Create a basic graphical interface to visualize the swarm's movement and mapping progress on the Martian
+      terrain.
+    </p>
+    <h2>Performance Metrics</h2>
+    <p>Implement metrics to measure the swarm's effectiveness:</p>
+    <ul>
+      <li>
+        <p>Percentage of area mapped</p>
+      </li>
+      <li>
+        <p>Time to explore key features (e.g., cave entrances)</p>
+      </li>
+      <li>
+        <p>Efficiency of coverage (avoiding redundant exploration)</p>
+      </li>
+    </ul>
+    <h2>Implementation</h2>
+    <ul>
+      <li>
+        <p>Use Python with libraries like Pygame for visualization.</p>
+      </li>
+      <li>
+        <p>Simulate Martian gravity and terrain conditions to affect robot movement.</p>
+      </li>
+      <li>
+        <p>Implement simple obstacle avoidance for rocky terrain.</p>
+      </li>
+      <li>
+        <p>Add a feature for robots to detect and mark potential sites of scientific interest.</p>
+      </li>
+      <li>
+        <p>Include a basic communication model to simulate data sharing between robots.</p>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

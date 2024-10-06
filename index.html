@@ -146,9 +146,9 @@
       </ul>
       <h2>Communication</h2>
     <h3>1. Introduction</h3>
-<p>This document outlines the design and requirements for a communication system utilizing Flying Ad-Hoc Networks (FANET) to facilitate effective data gathering and transmission back to a rover in a swarm robotics context.</p>
+<p>The following outlines the design and requirements for a communication system utilizing Flying Ad-Hoc Networks (FANET) to facilitate effective data gathering and transmission back to a rover in a swarm robotics context.</p>
 
-<h3>2. Project Objectives</h3>
+<h3>2. Objectives</h3>
 <ul>
     <li>Enable inter-swarm communication.</li>
     <li>Facilitate data gathering and transmission back to the rover.</li>
@@ -197,10 +197,11 @@
 
 <h3>6. Communication Architecture</h3>
 <p>Each member of the swarm will be represented as a node in a graph, with <em>k</em> specialized members carrying radio equipment for communication with the rover (where <em>k</em> ≤ <em>n</em>). The swarm will utilize FANET to achieve intercommunication.</p>
+<img src="FANET_nodegraph.png", alt="node graph showing different ways the FANET can work">
 
 <h4>6.1 Communication Requirements</h4>
 <ul>
-    <li>Define a transmission point: a drone with direct communication to the rover.</li>
+    <li>A transmission point: a drone with direct communication to the rover.</li>
     <li>Each drone must map its assigned area to help the rover decide optimal paths, necessitating:
         <ul>
             <li>LIDAR sensors for terrain mapping.</li>

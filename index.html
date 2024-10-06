@@ -83,20 +83,22 @@
       <p>Implement basic swarm intelligence algorithms:</p>
       <ul>
         <li>
-          <p>Collision avoidance with terrain features and other robots: The swarm will have inter-communication methods that broadcasts each of their positions relative to the rover</p>
+          <p>Collision avoidance with terrain features and other robots: </p>
+          <p>The swarm will have inter-communication methods that broadcasts each of their positions relative to the rover</p>
+        <li>Each member of the swarm is equipped with a camera and a lidar sensor for terrain mapping, this can also be utilized for terrain collison detection</li>
         </li>
         <li>
-          <p>Dispersion to efficiently cover the Martian terrain</p>
-        </li>
-        <li>
-          <p>Simple communication between nearby robots</p>
+          <p>The swarm will be given a target point with the origin at the rover. They will from a sphere with the origin at the specified point</p>
+          <p>The rover only need to send out a length and a theta (2D sphereical coordinate, a circle coordinate) and the swarm will decide how high they need to be </p>
         </li>
       </ul>
       <h3>Exploration and Mapping Algorithm</h3>
       <ul>
         <li>
-          <p>Develop a decentralized algorithm for the swarm to explore and map the Martian surface.</p>
+          <p> Use the lidar and camera to obtain images </p>
         </li>
+        <li> either process and compress the data on board, or send raw data depending on mission requirements </li>
+        <li> Transmission will be covered in a later section </li>
         <li>
           <p>Implement a method for robots to mark and share information about discovered features.</p>
         </li>
@@ -118,6 +120,14 @@
           <p>Efficiency of coverage (avoiding redundant exploration)</p>
         </li>
       </ul>
+
+      <h2>Implementation</h2>
+      <ul>
+        <li>
+         psuedo code can be found on the github repo https://github.com/RD2P/Simulated-Martian-Swarm-Exploration-and-Mapping
+        </li>
+      </ul>
+
       <h2>Communication</h2>
       <h3>1. Introduction</h3>
       <p>The following outlines the design and requirements for a communication system utilizing Flying Ad-Hoc Networks
